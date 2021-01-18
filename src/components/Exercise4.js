@@ -38,6 +38,7 @@ export default function Exercise4() {
       setError('')
       setData([email,password]);
       setSubmitted(true)
+
     
       
     }
@@ -54,9 +55,9 @@ export default function Exercise4() {
     <div>
       <form className="form" onSubmit={handleSubmit}>
         <p>Sign up</p>
-        <input type="email" placeholder="Enter your email" onChange={handleEmail}></input>
-        <input type="password" placeholder="enter your password" onChange={handlePassword}></input>
-        <input type="password" placeholder="confirm your password" onChange={handleConfirmPassword}></input>
+        <input disabled={submitted} type="email" placeholder="Enter your email" onChange={handleEmail}></input>
+        <input disabled={submitted} type="password" placeholder="enter your password" onChange={handlePassword}></input>
+        <input disabled={submitted} type="password" placeholder="confirm your password" onChange={handleConfirmPassword}></input>
         <button type="submit">Submit</button>
       </form>
       {error && <p>{error}</p> }
