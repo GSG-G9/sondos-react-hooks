@@ -7,16 +7,13 @@ export default function Exercise4() {
   const [confirmedPassword, setConfirmedPassword] = useState('')
   const [error, setError] = useState(null);
   const [submitted, setSubmitted] = useState(false);
-  const [data, setData] = useState();
 
   const handleEmail = (event) => {
-    event.preventDefault()
-    const {value} = event.target;
-    setEmail(value);
+    setEmail(event.target.value);
   }
 
   const handlePassword = (event) => {
-    setPassword(event.target.value)
+    setPassword(event.target.value);
   }
 
   const handleConfirmPassword = (event) => {
@@ -35,12 +32,8 @@ export default function Exercise4() {
       event.target.elements[0].value = "";
       event.target.elements[1].value = "";
       event.target.elements[2].value = "";
-      setError('')
-      setData([email,password]);
-      setSubmitted(true)
-
-    
-      
+      setError('');
+      setSubmitted(true);
     }
   }
 
